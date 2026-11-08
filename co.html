@@ -1,0 +1,35 @@
+Set-Content -Path "C:\Users\rahul\Downloads\activejava\New folder\consoleTest.html" -Value @'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript visible Display Test</title>
+    <style>
+        body { font-family: sans-serif; padding: 40px; background-color: #FFFDF9; text-align: center; }
+        .display-box { background-color: #FFFFFF; border: 2px solid #E5A93C; border-radius: 12px; padding: 20px; max-width: 300px; margin: 20px auto; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h1 { font-size: 42px; color: #800020; margin: 10px 0; font-family: monospace; }
+        p { color: #555; font-size: 16px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h2>JavaScript Computation Monitor</h2>
+    <p>JavaScript has executed and calculated the math result line:</p>
+
+    <div class="display-box">
+        <p>Calculated Output Array</p>
+        <!-- The script targets this exact ID line and injects the answer directly -->
+        <h1 id="screenMonitor">...Calculating...</h1>
+    </div>
+
+    <script>
+        // ⚡ Direct execution injection (Calculates 9+9 and updates your viewport instantly)
+        document.getElementById("screenMonitor").innerHTML = 9 + 9;
+        
+        // Background backup fallback verification stream
+        console.log(9 + 9);
+    </script>
+
+</body>
+</html>
+'@; explorer "C:\Users\rahul\Downloads\activejava\New folder\consoleTest.html"
